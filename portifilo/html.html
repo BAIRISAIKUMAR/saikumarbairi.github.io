@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Myportfolio</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="your-image.jpg"
+              alt="Ram Maheshwari Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Saikumar Bairi</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="html.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="html.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="html.html#projects" class="header__link">
+                Education
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="html.html#Certications" class="header__link">
+                Certications
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="html.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="html.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Education </a>
+            </li>
+             <li class="header__sm-menu-link">
+              <a href="./index.html#Certications"> Certications</a>
+             </li>
+            <li class="header__sm-menu-link">
+              <a href="html.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero" id="bubbleArea">
+      <script>
+        const bubbleArea = document.getElementById('bubbleArea');
+
+        // Function to create bubbles with an image
+        function createBubble(x, y) {
+            const bubble = document.createElement('span');
+            bubble.classList.add('bubble');
+
+            // Randomize size of the bubbles
+            const size = Math.random() * 40 + 30; // Random size between 30px and 70px
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+
+            // Set the background image (use your own image URL here)
+            bubble.style.backgroundImage = 'url("your-image.jpg")';
+
+            // Position the bubble where the mouse is
+            bubble.style.left = `${x - size / 2}px`;
+            bubble.style.top = `${y - size / 2}px`;
+
+            // Append the bubble to the bubbleArea
+            bubbleArea.appendChild(bubble);
+
+            // Remove the bubble after animation
+            setTimeout(() => {
+                bubble.remove();
+            }, 3000); // Adjust time if needed
+        }
+
+        // Event listener to create bubbles when the mouse moves over the bubbleArea
+        bubbleArea.addEventListener('mousemove', (e) => {
+            const rect = bubbleArea.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            createBubble(x, y);
+        });
+    </script>
+
+      <div class="home-hero__content">
+        <p class="text-primary">
+                Hi, My name is 
+         </p>
+        <h1 class="heading-primary"> Bairi Saikumar.</h1>
+        <div class="home-hero__info">
+          <h2 class="text-primarys">I'm a 👨🏻‍💻 freelancer </h2>
+        </div>
+        <div class="para">
+          <p>Unlock your potential with freelance services in web design, 
+            video editing, <br>
+            and graphic design—where creativity meets opportunity, one project at a time.</p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">Projects</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+            <a href="https://www.instagram.com/bairi_saikumar/" class="home-hero__social-icon-link" target="blank">
+                <img src="insta-ico.png" alt="icon"  class="home-hero__social-icon" />
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="mailto:bairisaikumar143@gmail.com" class="home-hero__social-icon-link" target="_blank">
+                <img src="MAIL.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/bairi-saikumar-2aa373250/" class="home-hero__social-icon-link" target="_blank">
+              <img src="linkedin-ico.png" alt="icon" class="home-hero__social-icon" />
+          </a>
+      </div>
+      <div class="home-hero__social">
+        <a href="https://github.com/settings/profile" class="home-hero__social-icon-link" target="_blank">
+            <img src="git.png" alt="icon" class="home-hero__social-icon" />
+        </a>
+    </div>
+        <div class="home-hero__social">
+            <a href="https://www.youtube.com/@sai.editzz" class="home-hero__social-icon-link" target="_blank">
+                <img src="yt.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="https://www.facebook.com/govind.bairi.35" class="home-hero__social-icon-link" target="_blank">
+                <img src="download.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+    </div>
+    
+    
+    
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            Hello, I'm Saikumar Bairi, a MCA student in Dr.Lankapall Bullayya College,
+            Visakhapatnam.i'm a web Developer and passinate photographer & video editor.
+           
+
+
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Hey! It's
+                <strong>Saikumar Bairi</strong>
+                and I'm a <strong> Web Developer </strong> located in
+               Vizag. 
+                
+                 I’m a versatile freelancer with expertise in web design,
+                 video editing, photography, and graphic design. Whether you need a visually 
+                 engaging website, captivating video content, professional photography, or striking graphics,
+                  I bring a creative and detail-oriented approach to every project. Let’s work together to bring your ideas to life!.
+\ </p>
+              <p class="about__content-details-para">
+                I'm a bit of a digital product junky. Over the years, I've used
+                hundreds of web and mobile apps in different industries and
+                verticals. Feel free to
+                <strong>contact</strong> me here.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+              > Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+            <div class="skills__skill">Python</div>
+        <div class="skills__skill">Mongodb</div>
+              <div class="skills__skill">Wordpress</div>
+              <div class="skills__skill">Adobe Photoshop</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="saikumar11"><section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Education</span>
+          <span class="heading-sec__sub">
+           Hear is my acadamic details
+          </span>
+        <h1 style="font-size: 212%;">10th Class</h1>
+       <p style="font-size:medium;"> School: Govt High School, Hiramandalam
+        CGPA: 9.7 </p><br> <br>
+        
+        <h2 style="font-size: 212%;">Intermediate (MPC) </h2>
+       <p style="font-size:medium;"> College: Govt Junior College, Hiramandalam
+        CGPA: 8.79 </p><br> <br>
+        
+      <h2 style="font-size: 212%;"> Bachelor's Degree (MPCS) </h2>
+        <p style="font-size:medium;"> College: Sun Degree College, Srikakulam </p><br> <br>
+        
+      <h2 style="font-size: 212%;"> Master's in Computer Applications (MCA) </h2>
+        <p style="font-size:medium;">College: Dr. Lankapalli Bullayya College, Visakhapatnam
+        Status: Pursuing </p>
+      </div>
+
+        
+        </div>
+      </div>
+    </section>
+    
+   <section id="Certications" class="achieveclass">
+  <h1>Certications</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="certificate1.jpg" alt="Beach 1">
+      <h2 class="p1">This is my first certificate</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="certificate2.jpg" alt="Beach 2">
+      <h2 class="p2">This is my second certificate</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="certificate3.jpg" alt="Beach 3">
+      <h2 class="p3">This is my third certificate</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="certificate4.jpg" alt="Beach 4" >
+      <h2 class="p4">This is my fourth certificate</h2>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="lightbox image">
+</div>
+
+<script>
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = image.src;
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+</script>
+
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt"> Contact </span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            You can contact me directly at 8978493826 or simply fill the beow form.<br>
+             I’d be more than happy to discuss how we can work together to achieve your goals.
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form action="#" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="text"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/bairi-saikumar-2aa373250/">
+                <img
+                  class="main-footer__icon"
+                  src="linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/bairi_saikumar/">
+                <img
+                  class="main-footer__icon"
+                  src="insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:bairisaikumar143@gmail.com">
+                <img
+                  class="main-footer__icon"
+                  src="MAIL.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/settings/profile">
+                <img
+                  class="main-footer__icon"
+                  src="git.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@sai.editzz">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="yt.png"
+                  alt="icon" 
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Saikumar Bairi</h4>
+            <p class="main-footer__short-desc">
+              Thank you so much for visiting! Your time and interest mean a lot to me. <br>
+              If you have any questions feedback, or just want to chat, please don’t <br>hesitate to reach out.
+               I’m here to help and would love to hear from you!
+            </p>
+          </div>
+        </div>
+        <div class="main-footer__lower">
+          &copy; Copyright 2024. Made by
+          <a rel="noreferrer" target="_blank" href="bairisaikumar143@gmail.com"
+            >Saikumar Bairi</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
